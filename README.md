@@ -1,5 +1,18 @@
 # Python Employee Management System
 
+> **For classmates – super quick start**
+>
+> 1. Make sure you have **Python 3** installed.
+> 2. Clone and open this folder in a terminal:
+>    - `git clone <YOUR_REPOSITORY_URL>`
+>    - `cd pythonProject-main`
+> 3. Run **one** of these commands (depending on what you use):
+>    - PowerShell: `.\run.ps1`
+>    - CMD: `run.bat`
+>    - Linux/macOS/Git Bash: `bash run.sh`
+>
+> This will automatically create a virtual environment, install dependencies, and start the app.
+
 This project is a desktop employee management system built with Tkinter and SQLite. It provides a role-based workflow for logging in, encoding employee information, computing payroll, managing user accounts, and viewing records from an admin page.
 
 ## Overview
