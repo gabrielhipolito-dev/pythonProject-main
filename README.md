@@ -58,6 +58,19 @@ python Lab8_C.py
 python Lab8_D.py
 ```
 
+## Default Login Accounts
+
+Use any of the accounts below to access the system:
+
+| Username | Password | User Type |
+| --- | --- | --- |
+| `Furina` | `1234567` | `HR` |
+| `111` | `111` | `Admin` |
+| `Romsi` | `1111` | `Accounting` |
+| `12121` | `111` | `Employee` |
+
+These values come from the bundled database at `Resources/OOP_Lab6_DB.db`.
+
 ## Project Structure
 
 ```text
