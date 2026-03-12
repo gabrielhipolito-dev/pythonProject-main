@@ -42,26 +42,26 @@ Important: `git clone` and `git pull` do not automatically install packages on a
 
 For security reasons, Git does not auto-run project scripts after clone/pull.
 
-Use the quick setup scripts below to make onboarding one command.
+Use the quick **run** scripts below to make onboarding one command.
 
-### Quick Setup (One Command)
+### Quick Setup + Run (Recommended)
 
 PowerShell (Windows):
 
 ```powershell
-.\setup.ps1
+.\run.ps1
 ```
 
 Command Prompt (Windows):
 
 ```bat
-setup.bat
+run.bat
 ```
 
 Bash (Linux/macOS/Git Bash):
 
 ```bash
-bash setup.sh
+bash run.sh
 ```
 
 1. Clone the repository:
@@ -76,35 +76,52 @@ git clone <YOUR_REPOSITORY_URL>
 cd pythonProject-main
 ```
 
-3. Run one setup script (this creates `.venv` and installs dependencies):
+3. Run one **run** script (this will create `.venv`, install dependencies, and start the app):
+
+PowerShell (Windows):
+
+```powershell
+.\run.ps1
+```
+
+Command Prompt (Windows):
+
+```bat
+run.bat
+```
+
+Bash (Linux/macOS/Git Bash):
+
+```bash
+bash run.sh
+```
+
+If you prefer to do things manually, you can still run the setup scripts and start the app yourself.
 
 PowerShell (Windows):
 
 ```powershell
 .\setup.ps1
+.\.venv\Scripts\python Project_Runner.py
 ```
 
 Command Prompt (Windows):
 
 ```bat
 setup.bat
+.\.venv\Scripts\python Project_Runner.py
 ```
 
 Bash (Linux/macOS/Git Bash):
 
 ```bash
 bash setup.sh
-```
-
-4. Run the app:
-
-```bash
-.\.venv\Scripts\python Project_Runner.py
+.venv/bin/python Project_Runner.py
 ```
 
 ## How To Run
 
-Run the main application from the project root:
+Run the main application from the project root (for example from an activated virtual environment):
 
 ```bash
 python Project_Runner.py
