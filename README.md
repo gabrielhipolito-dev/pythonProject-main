@@ -59,24 +59,6 @@ Use the quick **run** scripts below to make onboarding one command.
 
 ### Quick Setup + Run (Recommended)
 
-PowerShell (Windows):
-
-```powershell
-.\run.ps1
-```
-
-Command Prompt (Windows):
-
-```bat
-run.bat
-```
-
-Bash (Linux/macOS/Git Bash):
-
-```bash
-bash run.sh
-```
-
 1. Clone the repository:
 
 ```bash
