@@ -34,10 +34,72 @@ This project uses Python 3 and the following libraries:
 - `Pillow`
 - `tkcalendar`
 
-Install the external dependencies with:
+Dependencies are listed in `requirements.txt` and are installed automatically by the setup scripts.
+
+## Step-By-Step Setup (Clone To Run)
+
+Important: `git clone` and `git pull` do not automatically install packages on another person's machine.
+
+For security reasons, Git does not auto-run project scripts after clone/pull.
+
+Use the quick setup scripts below to make onboarding one command.
+
+### Quick Setup (One Command)
+
+PowerShell (Windows):
+
+```powershell
+.\setup.ps1
+```
+
+Command Prompt (Windows):
+
+```bat
+setup.bat
+```
+
+Bash (Linux/macOS/Git Bash):
 
 ```bash
-pip install pillow tkcalendar
+bash setup.sh
+```
+
+1. Clone the repository:
+
+```bash
+git clone <YOUR_REPOSITORY_URL>
+```
+
+2. Go to the project folder:
+
+```bash
+cd pythonProject-main
+```
+
+3. Run one setup script (this creates `.venv` and installs dependencies):
+
+PowerShell (Windows):
+
+```powershell
+.\setup.ps1
+```
+
+Command Prompt (Windows):
+
+```bat
+setup.bat
+```
+
+Bash (Linux/macOS/Git Bash):
+
+```bash
+bash setup.sh
+```
+
+4. Run the app:
+
+```bash
+.\.venv\Scripts\python Project_Runner.py
 ```
 
 ## How To Run
@@ -58,6 +120,12 @@ python Lab8_C.py
 python Lab8_D.py
 ```
 
+## Environment Variables
+
+No environment variable is required for normal use.
+
+The app uses the local SQLite database at `Resources/OOP_Lab6_DB.db`.
+
 ## Default Login Accounts
 
 Use any of the accounts below to access the system:
@@ -70,6 +138,36 @@ Use any of the accounts below to access the system:
 | `12121` | `111` | `Employee` |
 
 These values come from the bundled database at `Resources/OOP_Lab6_DB.db`.
+
+## Optional Docker Setup (Automation)
+
+This is a Tkinter desktop app, so the full GUI is meant to run on your local machine.
+
+The Docker setup in this project is for automated installation checks and smoke testing only.
+
+Build the Docker image:
+
+```bash
+docker build -t employee-mgmt-check .
+```
+
+Run the container smoke check:
+
+```bash
+docker run --rm employee-mgmt-check
+```
+
+## Optional YAML Workflow (GitHub Actions)
+
+The workflow file at `.github/workflows/ci.yml` automates:
+
+- Installing Python
+- Installing dependencies from `requirements.txt`
+- Running a Python compile smoke check across `.py` files
+
+This helps verify that fresh clones can install dependencies and pass a basic validation step.
+
+Note: this automation runs in GitHub's servers (CI), not automatically on each classmate's local machine.
 
 ## Project Structure
 
